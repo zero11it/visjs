@@ -27,7 +27,9 @@ import java.util.List;
 @JavaScript({"js/vis.min.js", "js/networkDiagram-connector.js"})
 @StyleSheet({"css/vis.min.css", "css/networkDiagram.css"})
 public class NetworkDiagram extends AbstractJavaScriptComponent {
-    private List<Node.NodeSelectListener> nodeSelectListeners = new ArrayList<>();
+	private static final long serialVersionUID = 1L;
+	
+	private List<Node.NodeSelectListener> nodeSelectListeners = new ArrayList<>();
     private List<Node.NodeClickListener> nodeClickListeners = new ArrayList<>();
     private List<Node.NodeDoubleClickListener> nodeDoubleClickListeners = new ArrayList<>();
     private List<Node.NodeHoverListener> nodeHoverListeners = new ArrayList<>();
@@ -62,56 +64,72 @@ public class NetworkDiagram extends AbstractJavaScriptComponent {
     public void init() {
         addStyleName("vis-network-diagram");
         addFunction(Constants.ON_SELECT, new JavaScriptFunction() {
-            @Override
+			private static final long serialVersionUID = 1L;
+
+			@Override
             public void call(final JsonArray properties) throws JsonException {
                 SelectEvent event = EventGenerator.getNodeSelectEvent(properties);
                 fireNodeSelectEvent(event);
             }
         });
         addFunction(Constants.ON_CLICK, new JavaScriptFunction() {
-            @Override
+			private static final long serialVersionUID = 1L;
+
+			@Override
             public void call(final JsonArray properties) throws JsonException {
                 ClickEvent event = EventGenerator.getNodeClickEvent(properties);
                 fireNodeClickEvent(event);
             }
         });
         addFunction(Constants.ON_DOUBLE_CLICK, new JavaScriptFunction() {
-            @Override
+			private static final long serialVersionUID = 1L;
+
+			@Override
             public void call(final JsonArray properties) throws JsonException {
                 DoubleClickEvent event = EventGenerator.getNodeDoubleClickEvent(properties);
                 fireNodeDoubleClickEvent(event);
             }
         });
         addFunction(Constants.ON_HOVER_NODE, new JavaScriptFunction() {
-            @Override
+			private static final long serialVersionUID = 1L;
+
+			@Override
             public void call(final JsonArray properties) throws JsonException {
                 HoverEvent event = EventGenerator.getNodeHoverEvent(properties);
                 fireNodeHoverEvent(event);
             }
         });
         addFunction(Constants.ON_BLUR_NODE, new JavaScriptFunction() {
-            @Override
+			private static final long serialVersionUID = 1L;
+
+			@Override
             public void call(final JsonArray properties) throws JsonException {
                 BlurEvent event = EventGenerator.getNodeBlurEvent(properties);
                 fireNodeBlurEvent(event);
             }
         });
         addFunction(Constants.ON_DRAG_START, new JavaScriptFunction() {
-            @Override
+			private static final long serialVersionUID = 1L;
+
+			@Override
             public void call(final JsonArray properties) throws JsonException {
                 DragStartEvent event = EventGenerator.getNodeDragStartEvent(properties);
                 fireNodeDragStartEvent(event);
             }
         });
         addFunction(Constants.ON_DRAG_END, new JavaScriptFunction() {
-            @Override
+			private static final long serialVersionUID = 1L;
+
+			@Override
             public void call(final JsonArray properties) throws JsonException {
                 DragEndEvent event = EventGenerator.getNodeDragEndEvent(properties);
                 fireNodeDragEndEvent(event);
             }
         });
         addFunction(Constants.ON_START_STABILIZATION, new JavaScriptFunction() {
-            @Override
+			private static final long serialVersionUID = 1L;
+
+			@Override
             public void call(final JsonArray properties) throws JsonException {
                 //System.out.println("onStartStabilization" + properties);
                 //fireGraphStabilizationStartEvent();
@@ -119,7 +137,9 @@ public class NetworkDiagram extends AbstractJavaScriptComponent {
         });
 
         addFunction(Constants.ON_STABILIZATION_PROGRESS, new JavaScriptFunction() {
-            @Override
+			private static final long serialVersionUID = 1L;
+
+			@Override
             public void call(final JsonArray properties) throws JsonException {
                 System.out.println("onStartStabilization" + properties);
                 StabilizationProgressEvent event = new StabilizationProgressEvent(properties);
@@ -128,35 +148,45 @@ public class NetworkDiagram extends AbstractJavaScriptComponent {
         });
 
         addFunction(Constants.ON_STABILIZATION_ITERATIONS_DONE, new JavaScriptFunction() {
-            @Override
+			private static final long serialVersionUID = 1L;
+
+			@Override
             public void call(JsonArray jsonArray) {
                // NetworkEvent event = new NetworkEvent();
                // fireGraphStabilizationStartEvent(event);
             }
         });
         addFunction(Constants.ON_STABILIZED, new JavaScriptFunction() {
-            @Override
+			private static final long serialVersionUID = 1L;
+
+			@Override
             public void call(final JsonArray properties) throws JsonException {
                 //System.out.println("onStabilized" + properties);
                 //fireGraphStabilizedEvent();
             }
         });
         addFunction(Constants.ON_VIEW_CHANGED, new JavaScriptFunction() {
-            @Override
+			private static final long serialVersionUID = 1L;
+
+			@Override
             public void call(final JsonArray properties) throws JsonException {
                 //System.out.println("onViewChanged" + properties);
                 //fireGraphViewChangedEvent();
             }
         });
         addFunction(Constants.ON_ZOOM, new JavaScriptFunction() {
-            @Override
+			private static final long serialVersionUID = 1L;
+
+			@Override
             public void call(final JsonArray properties) throws JsonException {
                 //System.out.println("onZoom" + properties);
                 //fireGraphZoomEvent();
             }
         });
         addFunction(Constants.ON_RESIZE, new JavaScriptFunction() {
-            @Override
+			private static final long serialVersionUID = 1L;
+
+			@Override
             public void call(final JsonArray properties) throws JsonException {
                 //System.out.println("onResize" + properties);
                 //fireGraphResizeEvent();
