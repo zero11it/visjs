@@ -25,5 +25,36 @@ public class ShapeProperties {
       This means all border options are taken into account.
      */
     boolean useBorderWithImage;
-
+    
+	public boolean isBorderDashes() {
+		return borderDashes;
+	}
+	
+	public void setBorderDashes(boolean borderDashes) {
+		this.borderDashes = borderDashes;
+	}
+	
+	public int getBorderRadius() {
+		return borderRadius;
+	}
+	
+	public void setBorderRadius(int borderRadius) {
+		this.borderRadius = borderRadius;
+	}
+	
+	public boolean isUseImageSize() {
+		return useImageSize;
+	}
+	
+	public void setUseImageSize(boolean useImageSize) {
+		this.useImageSize = useImageSize;
+	}
+	
+	public boolean isUseBorderWithImage() {
+		return useBorderWithImage;
+	}
+	
+	public void setUseBorderWithImage(boolean useBorderWithImage) {
+		this.useBorderWithImage = useBorderWithImage;
+	}
 }
