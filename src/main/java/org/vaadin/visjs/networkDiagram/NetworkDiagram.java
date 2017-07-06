@@ -141,7 +141,7 @@ public class NetworkDiagram extends AbstractJavaScriptComponent {
 
 			@Override
             public void call(final JsonArray properties) throws JsonException {
-                System.out.println("onStartStabilization" + properties);
+                //System.out.println("onStartStabilization" + properties);
                 StabilizationProgressEvent event = new StabilizationProgressEvent(properties);
                 fireGraphStabilizationProgressEvent(event);
             }
