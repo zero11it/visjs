@@ -12,7 +12,9 @@ window.org_vaadin_visjs_networkDiagram_NetworkDiagram = function () {
     var self = this;
 
     this.onStateChange = function () {
-        graph.redraw();
+    	if (graph != null){
+    		graph.redraw();
+    	}
     }
 
     this.init = function (o) {
@@ -78,9 +80,6 @@ window.org_vaadin_visjs_networkDiagram_NetworkDiagram = function () {
         graph.on('zoom', function (properties) {
             self.onZoom(properties);
         });
-
-
-        graph.draw();
     }
 
     this.fitToScreen = function(){
