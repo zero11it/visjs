@@ -131,7 +131,7 @@ public class Edge extends Edges{
         this.to = to;
     }
 
-    public enum Style {
+    public static enum Style {
         @SerializedName("line")
         line,
         @SerializedName("arrow")

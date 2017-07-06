@@ -9,7 +9,7 @@ public class Icon {
     private int size = 50;
     private String color = "#2B7CE9";
 
-    public enum Face{
+    public static enum Face{
         @SerializedName("FontAwesome")
         FontAwesome,
         @SerializedName("Ionicons")

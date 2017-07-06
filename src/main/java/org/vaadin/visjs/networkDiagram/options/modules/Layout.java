@@ -26,7 +26,7 @@ public class Layout {
          */
     public Hierarchical hierarchical = new Hierarchical();
 
-    public class Hierarchical {
+    public static class Hierarchical {
         /*
                 Toggle the usage of the hierarchical layout system.
                 If this option is not defined, it is set to true if any of the properties in this object are defined.

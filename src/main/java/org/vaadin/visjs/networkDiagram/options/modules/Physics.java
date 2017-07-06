@@ -161,7 +161,7 @@ public class Physics {
     }
 
 
-    public enum Solver {
+    public static enum Solver {
         @SerializedName("barnesHut")
         barnesHut,
         @SerializedName("repulsion")

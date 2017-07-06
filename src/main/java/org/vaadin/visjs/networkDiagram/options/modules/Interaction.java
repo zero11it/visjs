@@ -56,7 +56,7 @@ public class Interaction {
      */
     boolean zoomView = true;
 
-    public class Keyboard {
+    public static class Keyboard {
         /*
         Toggle the usage of the keyboard shortcuts. If this option is not defined,
         it is set to true if any of the properties in this object are defined.
@@ -65,7 +65,7 @@ public class Interaction {
         Speed speed = new Speed();
         boolean bindToWindow = true;
 
-        private class Speed {
+        public static class Speed {
             /*
             The speed at which the view moves in the x direction on pressing a key or pressing a navigation button.
              */

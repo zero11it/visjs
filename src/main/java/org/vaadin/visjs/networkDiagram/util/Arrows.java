@@ -7,7 +7,7 @@ public class Arrows {
     ArrowOptions middle = new ArrowOptions();
     ArrowOptions from = new ArrowOptions();
 
-    private class ArrowOptions {
+    public static class ArrowOptions {
         boolean enabled = false;
         float scaleFactor = 1;
 
